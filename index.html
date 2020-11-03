@@ -1,0 +1,69 @@
+<h1><u>~LOGIN FORM~</u></h1>
+<dialog open>
+  <ul class="list">
+  <li><input type='text' name="username" placeholder="Username"/></li>
+  <br><br><br>
+  <li><input id="password" type="password" placeholder="Password"/></li>
+   <br><br><br>
+   <li><input id="login" type="button" onclick="myFunction()" name="submit" value="Login"/></li>
+  </ul>
+</dialog>
+
+<p id="demo"></p>
+  <style>
+dialog{
+  margin-left:500px;
+  width:350px;
+  margin-top:100px;
+  border:solid black 4px;
+  border-radius:9px;
+  color: white;
+  text-align:center;
+}
+ul.list li{
+  width: 240px;
+  margin-bottom: 10px;
+}
+ul.list li input{
+  width: 250px;
+  text-align;center;
+  padding: 8px 0px;
+  border:none;
+  background-color:#d3d3d3;
+  border-radius:7px;
+    text-align;center;
+}
+ul.list li input[type="button"]{
+  background-color: blue;
+   color: white;
+}
+h1{
+  text-align: center;
+  margin-left: 100px;
+}
+    </style>
+    <body style="background:orange">
+      </body>
+
+      <script>
+  var input = document.getElementById("password");
+  input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("login").click();
+  }
+});
+function myFunction() {
+  var letter = document.getElementById("password").value;
+  var text;
+
+  // If the letter is "secret"
+  if (letter === "secret") {
+  text= "<h1>HELLO !! WELCOME TO THE WORLD OF JAVASCRIPT</h1>";
+    
+  }else{
+  text = "<h1>Invalid Password !!<h1>"
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
